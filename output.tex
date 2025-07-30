@@ -1,0 +1,328 @@
+\documentclass{article}
+
+%----------------------------
+% Include all LaTeX packages and customizations
+%----------------------------
+%----------------------------
+% Preamble: Packages & Setup
+%----------------------------
+
+% Document geometry & spacing
+\usepackage[
+  top=2in,         % Adjusted for logo height
+  bottom=1in,
+  left=1in,
+  right=1in,
+  headheight=100pt, % Enough space for 3.5cm logo
+  footskip=30pt
+]{geometry}
+
+% Font and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Layout and formatting
+\usepackage{setspace}     % line spacing control
+\usepackage{titlesec}     % section formatting
+\usepackage{ragged2e}     % ragged right text support
+\usepackage{array}        % improved array/table control
+\usepackage{needspace}    % prevent orphaned headings/tables
+
+% Table packages
+\usepackage{booktabs}     % professional tables
+\usepackage{tabularx}     % automatic column widths
+\usepackage{longtable}    % tables across pages
+
+% Header and image support
+\usepackage{fancyhdr}     % custom headers and footers
+\usepackage{graphicx}     % for \includegraphics
+
+%----------------------------
+% Line spacing
+%----------------------------
+\linespread{1.00}
+
+%----------------------------
+% Custom column type for ragged-right tables
+%----------------------------
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+
+\begin{document}
+
+%----------------------------
+% Fancy Header with Logo
+%----------------------------
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{%
+  \includegraphics[width=3.5cm]{rh_logo.png}\relax
+}
+\fancyfoot[C]{\thepage}
+
+
+%----------------------------
+% Title Block (Large heading & subtitle)
+%----------------------------
+\begin{center}
+\LARGE \textbf{ AI Talent BPA } \\
+\large \textbf{ Redhorse Corporation Call Order \#06 } \\
+\large \textbf{ June 2025 } \\
+\end{center}
+
+\vspace{1cm}
+
+%----------------------------
+% Contact Information Table
+%----------------------------
+%----------------------------
+% Contact Info Table
+%----------------------------
+\noindent
+\begin{tabular}{@{} l l @{}}
+
+\textbf{ COR }: & Joseph Lamb \\
+
+\textbf{ Call Order Lead }: & Craig R. Brewer \\
+
+\textbf{ Call Order Lead Executive }: & Vincent Bridgeman \\
+
+\textbf{ Program Name }: & USCENTCOM Call Order 06 \\
+
+\end{tabular}
+
+\vspace{1.5cm}
+
+%----------------------------
+% Executive Summary
+%----------------------------
+%----------------------------
+% Executive Summary
+%----------------------------
+\section*{ Executive Summary: }
+\label{sec:executive_summary}
+Redhorse is providing four AI/ML Engineers in support of USCENTCOM Directorate of Logistics (CCJ4).  CCJ4 directs the efforts of the Joint Logistics Enterprise in support of USCENTCOM missions to promote cooperation  among nations, respond to crisis, deter and defeat trans regional aggression, while supporting the development of  resilient logistics and engineering capabilities of their partners.
+
+\vspace{1.5cm}
+
+%----------------------------
+% Task Summary (high-level accomplishments)
+%----------------------------
+%----------------------------
+% Task Report Summary Section
+%----------------------------
+\section*{ Significant Accomplishment: }
+\label{sec:task_report_summary}
+
+\begin{itemize}
+
+  \item I added a stacked bar graph to the supply table in red dashboard. To calculate the top parts causing equipment to enter an NMCS status and the breakdown is by who is providing the replacement part.
+
+  \item I moved our databricks notebooks back to green  in order to reduce the size of the esr file that is bifrosted to red.\textbackslash\{\}
+
+  \item Managed a meeting with the PSU team to discuss ways ahead to build out the monitoring to better the ccj4 leadership to quickly and effectively isolate issues in the pipeline.
+
+\end{itemize}
+
+\vspace{1.5cm}
+
+%----------------------------
+% Staffing Table
+%----------------------------
+%----------------------------
+% Staffing Table
+%----------------------------
+\section*{ Staffing Table }
+\label{sec:staffing_table}
+
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+\textbf{Name} & \textbf{Job Title} & \textbf{Start Date} \\
+\hline
+Craig R. Brewer & AI/ML Engineer \& RH Team Lead & 14 Feb. 2024 \\
+\hline
+Graham Stacy & AI/ML Engineer & 21 Sept. 2023 \\
+\hline
+Matthew Feliciano & AI/ML Engineer & 26 Feb. 2024 \\
+\hline
+Quinton LoRe & AI/ML Engineer & 09 June 2025 \\
+\hline
+
+\end{tabularx}
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+\Needspace{12\baselineskip}  % Prevent orphaned section title/header
+\section*{\centering \textbf{ Craig's Completed Tasks: }}
+\label{sec:craig_tasks}
+
+
+\begin{longtable}{@{}p{2.5cm} p{2.5cm} p{9cm}@{}}
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+
+CRAM & 20250604 & There was a data load issue inside of the CRAM Dashboard requiring investigation. The visuals on the dashboard were not displaying. This triggered a meeting with Jim Satchle and Cpt. Trey Pujat. Where I ensured that there team was manually uploading the correct information throught the ADVANA EDL website. After that was confirmed I tracked the ingest of the data and found the manual upload had been successful. During this investigation it also became clear that a 14 day filter had been applied meaning that if new data was not added the visual would fail to render and that this was the desired outcome but that the customer no longer wished to maintain this standard and thus removed the set filter upon opening the dashboard. The issue turned out to be in the Qlik Sense load editor. The default connection string was set to Nick Moore and as he left the team and his access had been removed the task to reload the application was no longer valid and would crash. Once I removed his connection string and added my own as the default the application was able to be reloaded once more. \\
+
+\\[-0.5ex]  % Extra space between rows
+
+
+AFCENT & 20250610 & B-52 Location update in DataBricks and AFCENT Dashboard. We had a serial number showing up in the wrong location. I was able to manual alter the location of the B-52 in the DataBricks dashboard. The system eventually caught up over time; however, due to global events, waiting for such delays to resolve naturally was not feasible in our operational environment. This may be a good opportunity to highlight the potential use of writeback tables, as we do with other applications, especially when considering real-world implications. Implementing a writeback table could offer a faster and more responsive solution. \\
+
+\\[-0.5ex]  % Extra space between rows
+
+
+APS & 20250618 & APS Dashboard – Equipment Slant and Navigation Enhancements: The Equipment Slant was replicated in the APS Dashboard to match the format used in other Readiness dashboards. While the initial task was completed quickly, the customer later requested additional modifications to the Maintenance, Supply, Equipment Detail, and Equipment Slant sheets. The updated dashboard was published to the test stream for review.  Following that review, the customer submitted an additional request to configure a bookmark that automatically filters the application to show only APS-3 and APS-5 upon launch. After implementing the filter and confirming the application was functioning as intended, the customer further amended the task.  They requested an update to the Sustainment Dashboard under the map section. Specifically, the title above the map should now serve as a navigation link to the APS Dashboard in two ways:      Legacy Path – Retains the existing behavior, directing users to the APS Rollup view.      New Path under the Maintenance Header – Directs users to the APS Equipment Slant page, mirroring the navigation experience in other Readiness dashboards.  These updates ensure consistency across dashboards and improve user accessibility to APS-specific data. \\
+
+
+\end{longtable}
+
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+\Needspace{12\baselineskip}  % Prevent orphaned section title/header
+\section*{\centering \textbf{ Graham's Completed Tasks: }}
+\label{sec:graham_tasks}
+
+
+\begin{longtable}{@{}p{2.5cm} p{2.5cm} p{9cm}@{}}
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+
+APS & 20250613 & APS-5 Equipment Location Update: The location of APS-5 equipment was updated to reflect a specific base within the CENTCOM theater. During a review of the application, the customer identified that certain pieces of equipment were being assigned incorrect locations. Mr. Stacy addressed this issue by identifying equipment with an APS value of “APS-5” and overwriting their latitude, longitude, and location fields accordingly. After testing the changes in his workspace, he published the updated application to the test stream. Following a successful review by the customer, he deployed the application to the public stream, effectively resolving the customer’s concerns. \\
+
+\\[-0.5ex]  % Extra space between rows
+
+
+CRAM & 20250624 & CRAM Dashboard – C-130 Data Exclusion Resolved: In the CRAM dashboard, C-130 values were being unintentionally dropped or excluded. Mr. Stacy began investigating the issue in Databricks and discovered that existing logic was filtering out “greytail” aircraft from the final table that feeds the CRAM dashboard. After confirming with the downrange customer that this exclusion was no longer desired, Mr. Stacy removed the filtering logic. As a result, the expected C-130 values are now properly reflected in the dashboard. The updated logic was implemented in the production notebook, and the task has been successfully resolved. \\
+
+\\[-0.5ex]  % Extra space between rows
+
+
+NAVCENT & 20250625 & The customer requested a new report within the NAVCENT dashboard that would include both a map and a pivot table, along with updates to the COCOM field to account for vessels. The new COCOM designation was labeled AFLOAT.  For the pivot table, the requirement was to display the location, piece of equipment, and a simplified version of the Equipment Slant, including the following metrics: OH, MC, FMC, PMCM, PMCS, NMCM, NMCS, and MC percentage.  Mr. Stacy identified equipment records containing a vessel name and updated their associated COCOM value to AFLOAT. While the latitude and longitude values could not be added at this time—due to the current lack of sensor data for tracking vessel positions—Mr. Swan has indicated that such data may become available in the near future. If so, this would allow us to retroactively populate geographic information on the map. \\
+
+
+\end{longtable}
+
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+\Needspace{12\baselineskip}  % Prevent orphaned section title/header
+\section*{\centering \textbf{ Matt's Completed Tasks: }}
+\label{sec:matt_tasks}
+
+
+\begin{longtable}{@{}p{2.5cm} p{2.5cm} p{9cm}@{}}
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+
+D2 & 20250604 & RFITV Integration: Brian Swan has requested the inclusion of some tables into the D2 dashboard for both ground routes and RFID reader. He is looking for both a visual and tabular representation in the D2 dashboard. The customer provided three different tables to help facilitate this request \\
+
+\\[-0.5ex]  % Extra space between rows
+
+
+MAVEN AIP & 20250614 & JDIR Questions: Brian Swan reached out to the J4 action officers to explore how Maven and our LLM could be leveraged to more effectively address questions originating within the Directorate. Since Mr. Feliciano’s area of expertise lies in D2, it became the focal point of our initial foray into the Maven AIP agent. After spending time refining the system and shaping the pipeline into a usable format, he enabled end users to ask complex questions—such as “What is the status of high-visibility or special interest cargo moving into or through the CENTCOM theater?” and “How much cargo moved by air or ground, by node or LOC, over a given time period?”—without needing to perform a deep dive into the dashboards. This is especially valuable for users with limited access or familiarity with navigating the existing dashboards. \\
+
+\\[-0.5ex]  % Extra space between rows
+
+
+D2 & 20250626 & D2 Dashboard Collaboration in Maven: The customer requested that Mr. Feliciano assist Nick Z. from Maven in building out the D2 dashboard, with the goal of mirroring the robust work Mr. Feliciano has developed over the past year. Several calls were held between the two to address and resolve technical issues Nick Z. was experiencing within the Maven platform. Currently, no additional calls are scheduled; however, both parties remain open to future collaboration as needed. \\
+
+
+\end{longtable}
+
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+\Needspace{12\baselineskip}  % Prevent orphaned section title/header
+\section*{\centering \textbf{ Quinton's Completed Tasks: }}
+\label{sec:quinton_tasks}
+
+
+\begin{longtable}{@{}p{2.5cm} p{2.5cm} p{9cm}@{}}
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ Project } & \textbf{ Date } & \textbf{ Task } \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+
+admin & 20250609 & Mr. LoRe had to get access to all his advana, DataBricks, and Qlik Sense hub account. Along with other initial onboarding tasks that were required for his work at Redhorse. \\
+
+
+\end{longtable}
+
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+
+
+\end{document}

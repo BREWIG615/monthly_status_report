@@ -1,0 +1,49 @@
+\documentclass{article}
+
+%----------------------------
+% Include all LaTeX packages and customizations
+%----------------------------
+{% include "preamble_packages.tex.j2" %}
+
+\begin{document}
+
+%----------------------------
+% Fancy Header with Logo
+%----------------------------
+{% include "fancy_header.tex.j2" %}
+
+%----------------------------
+% Title Block (Large heading & subtitle)
+%----------------------------
+{% include "title_block.tex.j2" %}
+
+%----------------------------
+% Contact Information Table
+%----------------------------
+{% include "contact_info.tex.j2" %}
+
+\vspace{1.5cm}
+
+%----------------------------
+% Executive Summary
+%----------------------------
+{% include "exec_summary.tex.j2" %}
+
+\vspace{1.5cm}
+
+%----------------------------
+% Task Summary (high-level accomplishments)
+%----------------------------
+{% include "task_summary.tex.j2" %}
+
+%----------------------------
+% Staffing Table
+%----------------------------
+{% include "staffing_table.tex.j2" %}
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+{% include "person_logs.tex.j2" %}
+
+\end{document}

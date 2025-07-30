@@ -1,0 +1,9 @@
+%----------------------------
+% Contact Info Table
+%----------------------------
+\noindent
+\begin{tabular}{@{} l l @{}}
+{% for label, value in contact_info.items() %}
+\textbf{ {{ label | latex }} }: & {{ value | latex }} \\
+{% endfor %}
+\end{tabular}

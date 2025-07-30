@@ -1,0 +1,13 @@
+%----------------------------
+% Task Report Summary Section
+%----------------------------
+\section*{ {{ task_summary_title | latex }} }
+\label{sec:task_report_summary}
+
+\begin{itemize}
+{% for row in summary %}
+  \item {{ row.task | latex }}
+{% endfor %}
+\end{itemize}
+
+\vspace{1.5cm}

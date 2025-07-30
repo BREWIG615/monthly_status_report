@@ -1,0 +1,39 @@
+{% for person, records in all_logs.items() %}
+
+%----------------------------
+% Per-Person Task Logs
+%----------------------------
+\Needspace{12\baselineskip}  % Prevent orphaned section title/header
+\section*{\centering \textbf{ {{ person.title() + "'s Completed Tasks:" | latex }} }}
+\label{sec:{{ person | replace(' ', '_') | lower }}_tasks}
+
+{% if records %}
+\begin{longtable}{@{}p{2.5cm} p{2.5cm} p{9cm}@{}}
+\toprule
+\textbf{ {{ "Project" | latex }} } & \textbf{ {{ "Date" | latex }} } & \textbf{ {{ "Task" | latex }} } \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ {{ "Project" | latex }} } & \textbf{ {{ "Date" | latex }} } & \textbf{ {{ "Task" | latex }} } \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+{% for row in records %}
+{{ row.project | latex }} & {{ row.date | latex }} & {{ row.task | latex }} \\
+{% if not loop.last %}
+\\[-0.5ex]  % Extra space between rows
+{% endif %}
+{% endfor %}
+\end{longtable}
+{% else %}
+\textit{ {{ "No tasks found for this person." | latex }} }
+{% endif %}
+
+\vspace{0.5cm}
+\hrule
+\vspace{1cm}
+{% endfor %}

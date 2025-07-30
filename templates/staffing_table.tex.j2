@@ -1,0 +1,16 @@
+%----------------------------
+% Staffing Table
+%----------------------------
+\section*{ {{ staffing_info.title | latex }} }
+\label{sec:staffing_table}
+
+\noindent
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+\textbf{Name} & \textbf{Job Title} & \textbf{Start Date} \\
+\hline
+{% for row in staffing_info.rows -%}
+{{ row.name | latex }} & {{ row.role | latex }} & {{ row.start_date | latex }} \\
+\hline
+{% endfor %}
+\end{tabularx}

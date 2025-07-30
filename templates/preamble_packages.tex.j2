@@ -1,0 +1,46 @@
+%----------------------------
+% Preamble: Packages & Setup
+%----------------------------
+
+% Document geometry & spacing
+\usepackage[
+  top=2in,         % Adjusted for logo height
+  bottom=1in,
+  left=1in,
+  right=1in,
+  headheight=100pt, % Enough space for 3.5cm logo
+  footskip=30pt
+]{geometry}
+
+% Font and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Layout and formatting
+\usepackage{setspace}     % line spacing control
+\usepackage{titlesec}     % section formatting
+\usepackage{ragged2e}     % ragged right text support
+\usepackage{array}        % improved array/table control
+\usepackage{needspace}    % prevent orphaned headings/tables
+
+% Table packages
+\usepackage{booktabs}     % professional tables
+\usepackage{tabularx}     % automatic column widths
+\usepackage{longtable}    % tables across pages
+
+% Header and image support
+\usepackage{fancyhdr}     % custom headers and footers
+\usepackage{graphicx}     % for \includegraphics
+
+%----------------------------
+% Line spacing
+%----------------------------
+\linespread{1.00}
+
+%----------------------------
+% Custom column type for ragged-right tables
+%----------------------------
+{% raw %}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+{% endraw %}

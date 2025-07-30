@@ -1,0 +1,10 @@
+__pycache__/
+*.log
+*.aux
+*.out
+*.pdf
+*.zip
+.env
+.vscode/
+.idea/
+*.db
