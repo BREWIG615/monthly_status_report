@@ -20,12 +20,25 @@ cd monthly_status_report
 
 Make sure Python 3 is installed (preferably Python 3.10+).
 
-Create and activate a virtual environment:
+Create and activate a virtual environment for Linux/macOS:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
+Create and activate a virtual environment for Windows (Command Prompt):
+
+```bash
+python -m venv venv
+venv\Scripts\activate.bat
+```
+Create and activate a virtual environment for Windows (PowerShell):
+
+```bash
+python -m venv venv
+venv\Scripts\Activate.ps1
+```
+
 
 ### 3. Install Required Packages
 
