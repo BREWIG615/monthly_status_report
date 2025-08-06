@@ -4,11 +4,11 @@
 
 % Document geometry & spacing
 \usepackage[
-  top=2in,         % Adjusted for logo height
+  top=2in,            % Adjusted for logo height
   bottom=1in,
   left=1in,
   right=1in,
-  headheight=100pt, % Enough space for 3.5cm logo
+  headheight=110pt,   % Increased to remove fancyhdr warning
   footskip=30pt
 ]{geometry}
 
@@ -18,25 +18,25 @@
 \usepackage{lmodern}
 
 % Layout and formatting
-\usepackage{setspace}     % line spacing control
-\usepackage{titlesec}     % section formatting
-\usepackage{ragged2e}     % ragged right text support
-\usepackage{array}        % improved array/table control
-\usepackage{needspace}    % prevent orphaned headings/tables
+\usepackage{setspace}     % Line spacing control
+\usepackage{titlesec}     % Section formatting
+\usepackage{ragged2e}     % Ragged right text support
+\usepackage{array}        % Improved array/table control
+\usepackage{needspace}    % Prevent orphaned headings/tables
 
 % Table packages
-\usepackage{booktabs}     % professional tables
-\usepackage{tabularx}     % automatic column widths
-\usepackage{longtable}    % tables across pages
+\usepackage{booktabs}     % Professional tables
+\usepackage{tabularx}     % Automatic column widths
+\usepackage{longtable}    % Tables across pages
 
 % Header and image support
-\usepackage{fancyhdr}     % custom headers and footers
-\usepackage{graphicx}     % for \includegraphics
+\usepackage{fancyhdr}     % Custom headers and footers
+\usepackage{graphicx}     % For \includegraphics
 
 %----------------------------
 % Line spacing
 %----------------------------
-\linespread{1.00}
+\linespread{1.00}         % Single spacing
 
 %----------------------------
 % Custom column type for ragged-right tables
@@ -44,3 +44,8 @@
 {% raw %}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 {% endraw %}
+
+%----------------------------
+% Optional: Adjust top margin if needed
+%----------------------------
+% \addtolength{\topmargin}{-10pt}  % Uncomment only if header feels too low

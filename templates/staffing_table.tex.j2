@@ -1,16 +1,15 @@
 %----------------------------
 % Staffing Table
 %----------------------------
-\section*{ {{ staffing_info.title | latex }} }
-\label{sec:staffing_table}
 
-\noindent
-\begin{tabularx}{\textwidth}{|l|X|l|}
-\hline
-\textbf{Name} & \textbf{Job Title} & \textbf{Start Date} \\
-\hline
-{% for row in staffing_info.rows -%}
-{{ row.name | latex }} & {{ row.role | latex }} & {{ row.start_date | latex }} \\
-\hline
+\section*{ {{ "Staffing Assignments" | latex }} }
+
+\begin{tabular}{@{}p{5cm}p{6cm}p{4cm}@{}}
+\toprule
+\textbf{Name} & \textbf{Role} & \textbf{Start Date} \\
+\midrule
+{% for person in staffing_info %}
+{{ person.name | latex }} & {{ person.role | latex }} & {{ person.start_date | latex }} \\
 {% endfor %}
-\end{tabularx}
+\bottomrule
+\end{tabular}

@@ -1,9 +1,33 @@
 # exec_summary.py
 
-exec_summary = {
-    "title": "Executive Summary:",
-    "body": """Redhorse is providing four AI/ML Engineers in support of USCENTCOM Directorate of Logistics (CCJ4). 
-CCJ4 directs the efforts of the Joint Logistics Enterprise in support of USCENTCOM missions to promote cooperation 
-among nations, respond to crisis, deter and defeat trans regional aggression, while supporting the development of 
-resilient logistics and engineering capabilities of their partners."""
-}
+# 📦 --- Third-Party Libraries ---
+import pandas as pd
+
+# 🧩 --- Executive Summary Loader ---
+def get_exec_summary(df):
+    """
+    Extracts the executive summary body from a config Excel sheet with a single-column header 'value'.
+
+    Expected Excel sheet:
+    | value                        |
+    |-----------------------------|
+    | This month we completed...  |
+
+    Returns:
+    {
+        "title": "Executive Summary",
+        "body": "...summary text..."
+    }
+    """
+    if df.empty or "value" not in df.columns:
+        return {
+            "title": "Executive Summary",
+            "body": ""
+        }
+
+    values = df["value"].dropna().astype(str).str.strip().tolist()
+
+    return {
+        "title": "Executive Summary",
+        "body": values[0] if values else ""
+    }

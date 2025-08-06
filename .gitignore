@@ -1,0 +1,46 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+
+# Virtual environments
+venv/
+.env
+*.env
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# PDF build artifacts
+*.pdf
+*.zip
+
+# Excel files (if you don’t want to version-control them)
+# Uncomment the line below if Excel files are generated, not source
+# *.xlsx
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Jupyter and notebooks (boiler plate not all file types present in code)
+*.ipynb
+
+# Build artifacts
+*.egg-info/
+*.tar.gz
+*.whl
+
+# OS-specific
+.DS_Store
+Thumbs.db

@@ -1,10 +1,22 @@
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.db
+
+# LaTeX aux files
 *.log
 *.aux
 *.out
 *.pdf
-*.zip
-.env
+
+# IDEs & local config
 .vscode/
 .idea/
-*.db
+.env
+
+# Distribution / Build Artifacts
+*.egg-info/
+*.tar.gz
+*.whl
+*.zip
